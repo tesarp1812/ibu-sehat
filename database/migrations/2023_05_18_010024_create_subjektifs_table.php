@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('subjektifs', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('posts_id')->constrained('posts')->onUpdate('cascade')->onDelete('cascade');
             $table->string('keluhan');
             $table->string('riwayat_penyakit');
             $table->string('riwayat_keluarga');
