@@ -14,3 +14,5 @@ Route::get('/', function () {
 Route::get('home', function () {
     return view('home');
 });
+
+Route::resource('/subjektif', \App\Http\Controllers\SubjektifController::class);
