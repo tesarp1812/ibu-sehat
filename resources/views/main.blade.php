@@ -14,15 +14,17 @@
     <link rel="stylesheet" href="{{ asset('style/assets/css/flag-icon.min.css') }}">
     <link rel="stylesheet" href="{{ asset('style/assets/css/cs-skin-elastic.css') }}">
     <link rel="stylesheet" href="{{ asset('style/assets/scss/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('style/assets/css/lib/datatable/dataTables.bootstrap.min.css') }}">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 </head>
 <body>
-    
+
     <script src="{{ asset('style/assets/js/vendor/jquery-2.1.4.min.js') }}"></script>
     <script src="{{ asset('style/assets/js/popper.min.js') }}"></script>
     <script src="{{ asset('style/assets/js/plugins.js') }}"></script>
     <script src="{{ asset('style/assets/js/main.js') }}"></script>
- 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <aside id="left-panel" class="left-panel">
         <nav class="navbar navbar-expand-sm navbar-default">
             <div class="navbar-header">
@@ -32,7 +34,7 @@
                 <a class="navbar-brand" href="">IBU SEHAT</a>
                 <a class="navbar-brand hidden" href="">M</a>
             </div>
- 
+
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li>
@@ -48,7 +50,7 @@
             </div><!-- /.navbar-collapse -->
         </nav>
     </aside><!-- /#left-panel -->
- 
+
     <div id="right-panel" class="right-panel">
         <header id="header" class="header">
             <div class="header-menu">
@@ -81,7 +83,7 @@
                         </div>
                     </div>
                 </div>
- 
+
                 <div class="col-sm-5">
                     <div class="user-area dropdown float-right">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -92,7 +94,7 @@
                             <a class="nav-link" href="#"><i class="fa fa-power -off"></i>Logout</a>
                         </div>
                     </div>
- 
+
                     <div class="language-select dropdown" id="language-select">
                         <a class="dropdown-toggle" href="#" data-toggle="dropdown"  id="language" aria-haspopup="true" aria-expanded="true">
                             <i class="flag-icon flag-icon-id"></i>
@@ -112,17 +114,17 @@
                             </div>
                         </div>
                     </div>
- 
+
                 </div>
             </div>
- 
+
         </header><!-- /header -->
 
         @yield('breadcrumbs')
 
         @yield('content')
-  
-    </div>    
- 
+
+    </div>
+
 </body>
 </html>

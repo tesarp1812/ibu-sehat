@@ -28,11 +28,21 @@
 @section('content')
 
 <div class="content mt-3">
- 
+
     <div class="animated fadeIn">
         isi
     </div>
 
+    <button type="button" class="btn btn-warning" onclick="cok()">Swal</button>
+
 </div>
+
+<script>
+
+function cok(){
+    Swal.fire('Any fool can use a computer')
+}
+
+</script>
 
 @endsection
