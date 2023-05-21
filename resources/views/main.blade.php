@@ -42,7 +42,7 @@
                         <a href="{{  url('/posts') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Data Pasien </a>
                     </li>
                     <li>
-                        <a href="{{  url('/subjektif') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Checkup </a>
+                        <a href="{{  url('/subjektif') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Data Chekup </a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->

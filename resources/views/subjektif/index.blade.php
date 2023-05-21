@@ -34,7 +34,7 @@
         <div class="card">
             <div class="card-header">
                 <div class="pull-left">
-                    <strong>Biodata</strong>
+                    <strong>Data Subjektif Pasien</strong>
                 </div>
                     <div class="pull-right">
                         <a href="{{ route('posts.create') }}">
@@ -47,25 +47,26 @@
 
                 <table class="table table-bordered">
                     <thead>
-                            <tr><td>ID</td></tr>
-                            <tr><td>KELUHAN</td></tr>
+                        <tr>
+                            <td>ID</td>
+                            <td>KELUHAN</td>
                             <td>RIWAYAT PENYAKIT</td>
-                            {{-- <tr>RIWAYAT KELUARGA</tr>
-                            <tr>RIWAYAT TERDAHULU</tr>
-                            <tr>MENIKAH KE</tr>
-                            <tr>USIA MENIKAH</tr>
-                            <tr>LAMA MENIKAH</tr>
-                            <tr>HPHT</tr>
-                            <tr>MENARCHE</tr>
-                            <tr>LAMA HAID</tr>
-                            <tr>SIKLUS HAID</tr>
-                            <tr>WARNA</tr>
-                            <tr>KONSISTEN</tr>
-                            <tr>FLOUR ALBUS</tr>
-                            <tr>RIWAYAT KEHAMILAN</td> --}}
+                            <td>RIWAYAT KELUARGA</td>
+                            <td>RIWAYAT TERDAHULU</td>
+                            <td>MENIKAH KE</td>
+                            <td>USIA MENIKAH</td>
+                            <td>LAMA MENIKAH</td>
+                            <td>HPHT</td>
+                            <td>MENARCHE</td>
+                            <td>LAMA HAID</td>
+                            <td>SIKLUS HAID</td>
+                            <td>WARNA</td>
+                            <td>KONSISTEN</td>
+                            <td>FLOUR ALBUS</td>
+                            <td>RIWAYAT KEHAMILAN</td>
                             
                             <th></th>
-                        
+                        </tr>
                     </thead>
                     <tbody>
                         {{-- @foreach ($posts as $post)
