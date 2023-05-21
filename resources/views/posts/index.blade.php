@@ -62,7 +62,6 @@
                             <th>PEKERJAAN SUAMI</th>
                             <th>ALAMAT SUAMI</th>
                             <th>NOMER SUAMI</th>
-                            <th>NOMER TELEPON SUAMI</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -79,10 +78,15 @@
                         <td>{{ $post->nama_suami }}</td>
                         <td>{{ $post->umur_suami }}</td>
                         <td>{{ $post->agama_suami }}</td>
-                        <td>{{ $post->penidikan_suami }}</td>
+                        <td>{{ $post->pendidikan_suami }}</td>
                         <td>{{ $post->pekerjaan_suami }}</td>
                         <td>{{ $post->alamat_suami }}</td>
                         <td>{{ $post->nomer_suami }}</td>
+                        <td>
+                            <a href="" class="btn btn-primary btn-sm">
+                                <i class="fa fa-pencil"></i>
+                            </a>
+                        </td>
                         </tr>
                         
                         @endforeach
