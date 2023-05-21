@@ -47,26 +47,28 @@
 
                 <table class="table table-bordered">
                     <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>NAMA</th>
-                            <th>UMUR</th>
-                            <th>AGAMA</th>
-                            <th>PENDIDIKAN</th>
-                            <th>ALAMAT</th>
-                            <th>NOMER TELEPON</th>
-                            <th>NAMA SUAMI</th>
-                            <th>UMUR SUAMI</th>
-                            <th>AGAMA SUAMI</th>
-                            <th>PENDIDIKAN SUAMI</th>
-                            <th>PEKERJAAN SUAMI</th>
-                            <th>ALAMAT SUAMI</th>
-                            <th>NOMER SUAMI</th>
+                            <tr><td>ID</td></tr>
+                            <tr><td>KELUHAN</td></tr>
+                            <td>RIWAYAT PENYAKIT</td>
+                            {{-- <tr>RIWAYAT KELUARGA</tr>
+                            <tr>RIWAYAT TERDAHULU</tr>
+                            <tr>MENIKAH KE</tr>
+                            <tr>USIA MENIKAH</tr>
+                            <tr>LAMA MENIKAH</tr>
+                            <tr>HPHT</tr>
+                            <tr>MENARCHE</tr>
+                            <tr>LAMA HAID</tr>
+                            <tr>SIKLUS HAID</tr>
+                            <tr>WARNA</tr>
+                            <tr>KONSISTEN</tr>
+                            <tr>FLOUR ALBUS</tr>
+                            <tr>RIWAYAT KEHAMILAN</td> --}}
+                            
                             <th></th>
-                        </tr>
+                        
                     </thead>
                     <tbody>
-                        @foreach ($posts as $post)
+                        {{-- @foreach ($posts as $post)
                         <tr>
                         <td>{{ $post->id}}</td>
                         <td>{{ $post->nama }}</td>
@@ -100,7 +102,7 @@
                         
                         </tr>
                         
-                        @endforeach
+                        @endforeach --}}
                     </tbody>
                 </table>
 
