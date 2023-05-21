@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>IBU SEHAT</title>
+    <title>@yield('title') IBU SEHAT</title>
     <meta name="description" content="Sufee Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-icon.png">
@@ -36,10 +36,10 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href=""> <i class="menu-icon fa fa-dashboard"></i>Home </a>
+                        <a href="{{  url('home') }}"> <i class="menu-icon fa fa-dashboard"></i>Home </a>
                     </li>
                     <li>
-                        <a href=""> <i class="menu-icon fa fa-puzzle-piece"></i>Data Pasien </a>
+                        <a href="{{  url('/posts') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Data Pasien </a>
                     </li>
                     <li>
                         <a href=""> <i class="menu-icon fa fa-puzzle-piece"></i>Checkup </a>
@@ -117,33 +117,11 @@
             </div>
  
         </header><!-- /header -->
- 
-        <div class="breadcrumbs">
-            <div class="col-sm-4">
-                <div class="page-header float-left">
-                    <div class="page-title">
-                        <h1>Dashboard</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-8">
-                <div class="page-header float-right">
-                    <div class="page-title">
-                        <ol class="breadcrumb text-right">
-                            <li class="active"><i class="fa fa-dashboard"></i></li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
- 
-        <div class="content mt-3">
- 
-            <div class="animated fadeIn">
-                Isi home
-            </div>
- 
-        </div>
+
+        @yield('breadcrumbs')
+
+        @yield('content')
+  
     </div>    
  
 </body>
