@@ -37,7 +37,16 @@
                     <div class="card">
                         <div class="card-header">
                             <strong class="card-title">Data Table</strong>
+
+                            <div class="pull-right">
+                                <a href="{{ route('posts.create') }}">
+                                    <i class="fa fa-plus"></i> Tambah Pasien
+                                </a>
+                            </div>
                         </div>
+
+                        
+                        
                         <div class="card-body">
                             <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                 <thead>
@@ -92,6 +101,11 @@
                                                     </button>
                                                 </form>
 
+                                                
+
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-info">Data Subjektif</button>
                                             </td>
 
                                         </tr>
