@@ -28,7 +28,7 @@ return new class extends Migration
             $table->string('warna');
             $table->string('konsisten');
             $table->string('flour_albus');
-            $table->string('riwayat_kehamlan');
+            $table->string('riwayat_kehamilan');
             $table->string('riwayat_kb');
             $table->timestamps();
         });
