@@ -27,73 +27,131 @@
 
 @section('content')
 
-    <div class="content mt-3">
+<div class="col-lg-6">
+    <div class="card">
+      <div class="card-header">
+        <strong>Basic Form</strong> Elements
+      </div>
+      <div class="card-body card-block">
+        <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+            @foreach ($subjektifs as $subjektif) 
 
-        <div class="animated fadeIn">
-
-            <div class="row">
-
-                <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <strong class="card-title">Data subjektif</strong>
-
-                            <div class="pull-right">
-                                <a href="{{ route('subjektif.create') }}">
-                                    <i class="fa fa-plus"></i> Tambah Data
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="card-body">
-
-                           
-
-                            {{-- <table id="bootstrap-data-table" class="table table-striped table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>KELUHAN</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($subjektifs as $subjektif)
-                                        <tr>
-                                            <td>{{ $subjektif->keluhan }}</td>
-                                            
-                                            <td>
-                                                <a href="{{ route('subjektif.edit', $subjektif->id) }}"
-                                                    class="btn btn-primary btn-sm">
-                                                    <i class="fa fa-pencil"></i>
-                                                </a>
-
-                                                <form onsubmit="return confirm('Apakah Anda Yakin ?');"
-                                                    action="{{ route('subjektif.destroy', $subjektif->id) }}" class="d-inline"
-                                                    method="POST">
-                                                    @method('DELETE')
-                                                    @csrf
-                                                    <button class="btn btn-sm btn-danger">
-                                                        <i class="fa fa-trash"></i>
-                                                    </button>
-                                                </form>
-
-                                            </td>
-
-                                        </tr>
-                                    @endforeach
-                                </tbody>
-                            </table> --}}
-
-                        </div>
-                    </div>
+            <div class="row form-group">
+                <div class="col col-md-3"><label class=" form-control-label">KELUHAN</label></div>
+                <div class="col-12 col-md-9">
+                  <p class="form-control-static">{{ $subjektif->keluhan }}</p>
                 </div>
+              </div>
+    
+              <div class="row form-group">
+                <div class="col col-md-3"><label class=" form-control-label">RIWAYAT PENYAKIT</label></div>
+                <div class="col-12 col-md-9">
+                  <p class="form-control-static">{{ $subjektif->riwayat_penyakit }}</p>
+                </div>
+              </div>
 
+              <div class="row form-group">
+                <div class="col col-md-3"><label class=" form-control-label">RIWAYAT KELUARGA</label></div>
+                <div class="col-12 col-md-9">
+                  <p class="form-control-static">{{ $subjektif->riwayat_keluarga }}</p>
+                </div>
+              </div>
 
+              <div class="row form-group">
+                <div class="col col-md-3"><label class=" form-control-label">RIWAYAT DULU</label></div>
+                <div class="col-12 col-md-9">
+                  <p class="form-control-static">{{ $subjektif->riwayat_dulu }}</p>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col col-md-3"><label class=" form-control-label">MENIKAH KE</label></div>
+                <div class="col-12 col-md-9">
+                  <p class="form-control-static">{{ $subjektif->menikah_ke }}</p>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col col-md-3"><label class=" form-control-label">USIA MENIKAH</label></div>
+                <div class="col-12 col-md-9">
+                  <p class="form-control-static">{{ $subjektif->usia_menikah }}</p>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col col-md-3"><label class=" form-control-label">LAMA MENIKAH</label></div>
+                <div class="col-12 col-md-9">
+                  <p class="form-control-static">{{ $subjektif->lama_menikah }}</p>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col col-md-3"><label class=" form-control-label">HPHT</label></div>
+                <div class="col-12 col-md-9">
+                  <p class="form-control-static">{{ $subjektif->HPHT }}</p>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col col-md-3"><label class=" form-control-label">menarche</label></div>
+                <div class="col-12 col-md-9">
+                  <p class="form-control-static">{{ $subjektif->menarche }}</p>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col col-md-3"><label class=" form-control-label">LAMA HAID</label></div>
+                <div class="col-12 col-md-9">
+                  <p class="form-control-static">{{ $subjektif->lama_haid }}</p>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col col-md-3"><label class=" form-control-label">SIKLUS HAID</label></div>
+                <div class="col-12 col-md-9">
+                  <p class="form-control-static">{{ $subjektif->siklus_haid }}</p>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col col-md-3"><label class=" form-control-label">WARNA</label></div>
+                <div class="col-12 col-md-9">
+                  <p class="form-control-static">{{ $subjektif->warna }}</p>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col col-md-3"><label class=" form-control-label">KONSISTEN</label></div>
+                <div class="col-12 col-md-9">
+                  <p class="form-control-static">{{ $subjektif->konsisten }}</p>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col col-md-3"><label class=" form-control-label">FLOUR ALBUS</label></div>
+                <div class="col-12 col-md-9">
+                  <p class="form-control-static">{{ $subjektif->flour_albus }}</p>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col col-md-3"><label class=" form-control-label">RIWAYAT KEHAMILAN</label></div>
+                <div class="col-12 col-md-9">
+                  <p class="form-control-static">{{ $subjektif->riwayat_kehamilan }}</p>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col col-md-3"><label class=" form-control-label">RIWAYAT KB</label></div>
+                <div class="col-12 col-md-9">
+                  <p class="form-control-static">{{ $subjektif->riwayat_kb }}</p>
+                </div>
+              </div>
+              
+                
+            @endforeach
+          </div>
             </div>
-
-
-        </div>
-
-    </div>
+          </div>
 
 @endsection

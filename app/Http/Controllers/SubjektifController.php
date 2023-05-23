@@ -50,43 +50,61 @@ class SubjektifController extends Controller
         //validate form
         $this->validate($request, [
             'keluhan' => 'required|min:1',
-            // 'riwayat_penyakit' => 'required|min:1',
-            // 'riwayat_keluarga' => 'required|min:1',
-            // 'riwayat_dulu' => 'required|min:1',
-            // 'alamat' => 'required|min:1',
-            // 'nomer_tlpn' => 'required|min:1',
-            // 'nama_suami' => 'required|min:1',
-            // 'umur_suami' => 'required|min:1',
-            // 'agama_suami' => 'required|min:1',
-            // 'pendidikan_suami' => 'required|min:1',
-            // 'pekerjaan_suami' => 'required|min:1',
-            // 'alamat_suami' => 'required|min:1',
-            // 'nomer_suami' => 'required|min:1'
+            'riwayat_penyakit' => 'required|min:1',
+            'riwayat_keluarga' => 'required|min:1',
+            'riwayat_dulu' => 'required|min:1',
+            'menikah_ke' => 'required|min:1',
+            'usia_menikah' => 'required|min:1',
+            'lama_menikah' => 'required|min:1',
+            'HPHT' => 'required|min:1',
+            'menarche' => 'required|min:1',
+            'lama_haid' => 'required|min:1',
+            'siklus_haid' => 'required|min:1',
+            'warna' => 'required|min:1',
+            'konsisten' => 'required|min:1',
+            'flour_albus' => 'required|min:1',
+            'riwayat_kehamilan' => 'required|min:1',
+            'riwayat_kb' => 'required|min:1'
         ]);
 
-        //upload image
-        // $image = $request->file('image');
-        // $image->storeAs('public/posts', $image->hashName());
 
         //create post
         Subjektif::create([
             'keluhan'              => $request->keluhan,
-            // 'riwayat_penyakit'     => $request->riwayat_penyakit,
-            // 'riwayat_keluarga'     => $request->riwayat_keluarga,
-            // 'riwayat_dulu'         => $request->riwayat_dulu,
-            // 'alamat'            => $request->alamat,
-            // 'nomer_tlpn'        => $request->nomer_tlpn,
-            // 'nama_suami'        => $request->nama_suami,
-            // 'umur_suami'        => $request->umur_suami,
-            // 'agama_suami'       => $request->agama_suami,
-            // 'pendidikan_suami'  => $request->pendidikan_suami,
-            // 'pekerjaan_suami'   => $request->pekerjaan_suami,
-            // 'alamat_suami'      => $request->alamat_suami,
-            // 'nomer_suami'       => $request->nomer_suami
+            'riwayat_penyakit'     => $request->riwayat_penyakit,
+            'riwayat_keluarga'     => $request->riwayat_keluarga,
+            'riwayat_dulu'         => $request->riwayat_dulu,
+            'menikah_ke'           => $request->menikah_ke,
+            'usia_menikah'         => $request->usia_menikah,
+            'lama_menikah'         => $request->lama_menikah,
+            'HPHT'                  => $request->HPHT,
+            'menarche'              => $request->menarche,
+            'lama_haid'             => $request->lama_haid,
+            'siklus_haid'           => $request->siklus_haid,
+            'warna'                 => $request->warna,
+            'konsisten'             => $request->konsisten,
+            'flour_albus'           => $request->flour_albus,
+            'riwayat_kehamilan'     => $request->riwayat_kehamilan,
+            'riwayat_kb'            => $request->riwayat_kb,
         ]);
 
         //redirect to index
         return redirect()->route('subjektif.index')->with(['success' => 'Data Berhasil Disimpan!']);
+    }
+
+    /**
+     * show
+     *
+     * @param  mixed $id
+     * @return View
+     */
+    public function show(string $id): View
+    {
+        //get post by ID
+        $subjektifs = Subjektif::findOrFail($id);
+
+        //render view with post
+        return view('subjektif.show', compact('subjektif'));
     }
 
     /**
@@ -133,19 +151,22 @@ class SubjektifController extends Controller
 
             //update post with new image
             $subjektif->update([
-                'keluhan'     => $request->keluhan,
-                'umur'   => $request->umur,
-                'agama'   => $request->agama,
-                'pendidikan'   => $request->pendidikan,
-                'alamat'   => $request->alamat,
-                'nomer_tlpn'   => $request->nomer_tlpn,
-                'nama_suami'   => $request->nama_suami,
-                'umur_suami'   => $request->umur_suami,
-                'agama_suami'   => $request->agama_suami,
-                'pendidikan_suami'   => $request->pendidikan_suami,
-                'pekerjaan_suami'   => $request->pekerjaan_suami,
-                'alamat_suami'   => $request->alamat_suami,
-                'nomer_suami'   => $request->nomer_suami
+                'keluhan'              => $request->keluhan,
+                'riwayat_penyakit'     => $request->riwayat_penyakit,
+                'riwayat_keluarga'     => $request->riwayat_keluarga,
+                'riwayat_dulu'         => $request->riwayat_dulu,
+                'menikah_ke'           => $request->menikah_ke,
+                'usia_menikah'         => $request->usia_menikah,
+                'lama_menikah'         => $request->lama_menikah,
+                'HPHT'                  => $request->HPHT,
+                'menarche'              => $request->menarche,
+                'lama_haid'             => $request->lama_haid,
+                'siklus_haid'           => $request->siklus_haid,
+                'warna'                 => $request->warna,
+                'konsisten'             => $request->konsisten,
+                'flour_albus'           => $request->flour_albus,
+                'riwayat_kehamilan'     => $request->riwayat_kehamilan,
+                'riwayat_kb'            => $request->riwayat_kb,
             ]);
         }
 
