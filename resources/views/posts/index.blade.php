@@ -105,7 +105,10 @@
 
                                             </td>
                                             <td>
-                                                <button type="button" class="btn btn-info">Data Subjektif</button>
+                                                <a href="{{ route('subjektif.index') }}"
+                                                    class="btn btn-primary btn-sm">
+                                                    <i>DATA SUBJEKTIF</i>
+                                                </a>
                                             </td>
 
                                         </tr>

@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Subjektif extends Model
 {
     use HasFactory;
+
+    /**
+     * post
+     *
+     * @return void
+     */
+    public function post()
+    {
+        return $this->belongsTo(Post::class);
+    }
 }

@@ -33,7 +33,9 @@
         <strong>Basic Form</strong> Elements
       </div>
       <div class="card-body card-block">
+        
         <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+
             @foreach ($subjektifs as $subjektif) 
 
             <div class="row form-group">
@@ -150,6 +152,7 @@
               
                 
             @endforeach
+
           </div>
             </div>
           </div>

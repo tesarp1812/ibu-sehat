@@ -23,11 +23,13 @@ class SubjektifController extends Controller
     public function index(): View
     {
         //get subjektifs
-        $subjektifs = subjektif::latest()->paginate(5);
+        $subjektifs = subjektif::latest()->get();
 
         //render view with subjektifs
         return view('subjektif.index', compact('subjektifs'));
     }
+
+
 
     /**
      * create

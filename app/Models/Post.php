@@ -29,4 +29,14 @@ class Post extends Model
         'alamat_suami',
         'nomer_suami',
     ];
+
+    /**
+     * subjektifs
+     *
+     * @return void
+     */
+    public function subjektifs()
+    {
+        return $this->hasMany(Subjektif::class);
+    }
 }

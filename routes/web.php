@@ -16,3 +16,15 @@ Route::get('home', function () {
 });
 
 Route::resource('/subjektif', \App\Http\Controllers\SubjektifController::class);
+
+/**
+ * @path /subjektifs
+ * @method GET
+ */
+Route::get('/subjektifs', [\App\Http\Controllers\UserController::class,]);
+
+// /**
+//  * @path /posts
+//  * @method GET
+//  */
+// Route::get('/posts', [\App\Http\Controllers\PostController::class,]);
